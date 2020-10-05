@@ -1,0 +1,64 @@
+/* div{
+    border: 1px solid black;
+} */
+
+.container{
+    height: auto;
+    width: auto;
+    display: flex;
+    margin-top: 250px;
+    justify-content: space-around;
+}
+
+#gamer,
+#computer{
+    height: 500px;
+    width: 300px;
+    float: left;
+}
+
+#result{
+    height: 500px;
+    width: 500px;
+    float: left;
+}
+
+/* #choise{
+    margin-top: 25px;
+    margin-left: 75px;
+} */
+
+.option{
+    height: 80px;
+    width: 80px;
+    margin: 50px 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 2s;
+}
+
+#result p{
+    font-size: 48px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-top: 75px;
+}
+
+button{
+    border: 2px double firebrick;
+    width: 150px;
+    height: 75px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px;
+    background-color: #ffbd2b;
+    margin-top: 20px;
+    margin-left: 175px;
+    outline: none;
+}
+
+#gamer div,
+#computer div{
+    width: 100%;
+    height: 50%;
+}
+
