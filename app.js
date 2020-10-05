@@ -46,3 +46,31 @@ function start(e) {
         option.style.opacity = '1';
     });
 }
+
+function play() {
+    buttons[0].disabled = false;
+    buttons[1].disabled = true;
+    setTimeout(() => {
+        const random = Math.floor(Math.random() * 4);
+        switch (random) {
+            case 0:
+                computer = 'rock';
+
+                break;
+            case 1:
+                computer = 'paper';
+
+                break;
+            case 2:
+                computer = 'scissors';
+                
+                break;
+                default:
+                    break;
+                }
+                
+        computerChoise.src = `img/${computer}.png`;
+        compare();
+    }, 1)
+
+}
