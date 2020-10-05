@@ -18,3 +18,21 @@ options.forEach(option => {
 });
 buttons[0].addEventListener('click', start);
 buttons[1].addEventListener('click', play);
+
+// Functions
+function select(e) {
+    user = e.target.alt;
+    switch (user) {
+        case 'rock':
+            userChoise.src = `img/rock.png`;
+            break;
+        case 'paper':
+            userChoise.src = `img/paper.png`;
+            break;
+        case 'scissors':
+            userChoise.src = `img/scissors.png`;
+            break;
+        default:
+            break;
+    }
+}
