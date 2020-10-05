@@ -74,3 +74,21 @@ function play() {
     }, 1)
 
 }
+
+function compare() {
+    if (user === computer) {
+        resultElement.textContent = 'You are tie';
+    }
+    else if (user == 'rock' && computer == 'paper')
+        resultElement.textContent = 'You lost';
+    else if (user == 'rock' && computer == 'scissors')
+        resultElement.textContent = 'You won';
+    else if (user == 'paper' && computer == 'rock')
+        resultElement.textContent = 'You won';
+    else if (user == 'paper' && computer == 'scissors')
+        resultElement.textContent = 'You lost';
+    else if (user == 'scissors' && computer == 'rock')
+        resultElement.textContent = 'You lost';
+    else if (user == 'scissors' && computer == 'paper')
+        resultElement.textContent = 'You won';
+}
