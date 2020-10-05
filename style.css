@@ -34,7 +34,7 @@
     margin: 50px 5px;
     visibility: hidden;
     opacity: 0;
-    transition: all 2s;
+    transition: all 0.5s;
 }
 
 #result p{
