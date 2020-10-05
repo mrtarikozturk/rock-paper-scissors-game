@@ -6,10 +6,11 @@ const resultElement = document.querySelector('p');
 const buttons = document.querySelectorAll('button');
 
 // Variables
-let user;
-let computer;
+let user = '';
+let computer = '';
 
 buttons[1].disabled = true;
+
 
 // EventListeners
 options.forEach(option => {
@@ -38,44 +39,47 @@ function select(e) {
 }
 
 function start(e) {
-    buttons[0].disabled = true;
-    buttons[1].disabled = false;
+    changeDisplay(true, false, 'visible', 1);
     resultElement.textContent = 'Make a choise'
+}
+
+function changeDisplay() {
+    buttons[0].disabled = arguments[0];
+    buttons[1].disabled = arguments[1];
     options.forEach(option => {
-        option.style.visibility = 'visible';
-        option.style.opacity = '1';
+        option.style.visibility = `${arguments[2]}`;
+        option.style.opacity = `${arguments[3]}`;
     });
+    // user = '';
+    // computer = '';
 }
 
 function play() {
-    buttons[0].disabled = false;
-    buttons[1].disabled = true;
+   if(user === '') return;
     setTimeout(() => {
         const random = Math.floor(Math.random() * 4);
         switch (random) {
             case 0:
                 computer = 'rock';
-
                 break;
             case 1:
                 computer = 'paper';
-
                 break;
             case 2:
-                computer = 'scissors';
-                
+                computer = 'scissors';                
                 break;
                 default:
                     break;
-                }
-                
+                }                
         computerChoise.src = `img/${computer}.png`;
         compare();
-    }, 1)
+    }, 1);
 
+    changeDisplay(false, true, 'hidden', 0);
 }
 
 function compare() {
+    alert('Burda')
     if (user === computer) {
         resultElement.textContent = 'You are tie';
     }
