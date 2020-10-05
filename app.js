@@ -36,3 +36,13 @@ function select(e) {
             break;
     }
 }
+
+function start(e) {
+    buttons[0].disabled = true;
+    buttons[1].disabled = false;
+    resultElement.textContent = 'Make a choise'
+    options.forEach(option => {
+        option.style.visibility = 'visible';
+        option.style.opacity = '1';
+    });
+}
